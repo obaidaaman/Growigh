@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="10dp"
+       >
+
+        <ImageView
+            android:id="@+id/imgTheVerge"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/theverge"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="The Verge"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imgTheVerge"
+            app:layout_constraintTop_toTopOf="@id/imgTheVerge" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tech News"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toEndOf="@+id/imgTheVerge"
+            app:layout_constraintTop_toBottomOf="@+id/txtUser" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Meta explains how AI influences what we see on Facebook and Instagram"
+         app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="22dp"
+            android:id="@+id/txtCaption"
+            android:textSize="12sp"
+            android:layout_marginEnd="92dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="25dp"
+            app:layout_constraintTop_toBottomOf="@+id/imgTheVerge"/>
+        
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="254dp"
+            android:id="@+id/imgPost"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtCaption"
+            android:layout_marginTop="17dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:contentDescription="TODO" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View all 9 comments"
+            android:id="@+id/txtNoOfComments"
+            app:layout_constraintTop_toBottomOf="@id/imgPost"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="25dp"
+            android:textSize="11sp"
+            android:textColor="#FF1E1E1E"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/txtNoOfComments"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="25dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/llLikes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:id="@+id/imgLikes"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/valentines_heart"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="21 likes"
+                    android:textSize="11sp"
+                    app:layout_constraintStart_toEndOf="@id/imgLikes"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="9dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llcomments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imgComments"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/comments"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:text="9 comments"
+                    android:textSize="11sp"
+                    app:layout_constraintStart_toEndOf="@id/imgLikes"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/llShare"
+               app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:id="@+id/imgShare"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/icon_share"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Share"
+                    android:textSize="11sp"
+                    android:paddingEnd="4dp"
+                    app:layout_constraintStart_toEndOf="@id/imgLikes"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="9dp"/>
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
