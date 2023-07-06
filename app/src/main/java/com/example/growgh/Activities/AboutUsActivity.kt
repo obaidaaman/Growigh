@@ -20,6 +20,7 @@ class AboutUsActivity : AppCompatActivity() {
 
         binding.appCompatButton.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
+            Animatoo.animateSlideLeft(this)
             finish()
         }
         binding.imgButton.setOnClickListener {
