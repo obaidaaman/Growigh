@@ -71,5 +71,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appCompatButton2" />
 
+    <View
+        android:layout_width="108dp"
+        android:layout_height="4dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="5dp"
+
+        android:background="@drawable/indicator_shape"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

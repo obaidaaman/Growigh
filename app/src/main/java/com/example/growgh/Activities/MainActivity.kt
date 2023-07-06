@@ -1,6 +1,7 @@
 package com.example.growgh.Activities
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.preference.PreferenceManager
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +11,7 @@ import com.example.growgh.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var  sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -17,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
 
-        val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
+         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
 
         val isFirstTime = sharedPreferences.getBoolean("PREF_FIRST_TIME", true)
 
