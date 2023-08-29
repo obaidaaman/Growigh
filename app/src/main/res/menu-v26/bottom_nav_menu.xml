@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+<item android:id="@+id/btnHome"
+    android:icon="@drawable/home_btn"
+    android:title="Home"
+
+    />
+<item android:id="@+id/btnVideos"
+    android:icon="@drawable/autoplay_btn"
+    android:title="Videos"
+
+    />
+<item android:id="@+id/btnMap"
+    android:icon="@drawable/distance_btn"
+    android:title="Map"
+
+    />
+
+</menu>

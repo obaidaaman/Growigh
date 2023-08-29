@@ -2,9 +2,23 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Growgh" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+         <item name="colorPrimary">#12599F</item>
+        <item name="colorPrimaryVariant">#12599F</item>
+        <item name="android:statusBarColor">#4D7DAC</item>
     </style>
 
     <style name="Theme.Growgh" parent="Base.Theme.Growgh" />
+
+   <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+       <item name="android:color">#103860</item>
+   </style>
+
+    <style name="fullScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+
+    </style>
 
 </resources>

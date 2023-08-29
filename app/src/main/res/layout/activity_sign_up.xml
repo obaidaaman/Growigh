@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white"
+    tools:context=".Activities.LoginActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textStyle="bold|italic"
+        android:text="Let's Setup!"
+        android:textSize="25sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/txtSetup"/>
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:contentDescription="applogo"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/happy_sun"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtSetup" />
+    <EditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/common_google_signin_btn_text_light"
+        android:hint="username"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@id/imgLogo"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/common_google_signin_btn_text_light"
+        android:hint="email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@id/usernameEditText"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:backgroundTint="@color/common_google_signin_btn_text_light"
+        app:layout_constraintTop_toBottomOf="@id/emailEditText"/>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        app:layout_constraintTop_toBottomOf="@id/btnSetup"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <Button
+        android:id="@+id/btnSetup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:textSize="18sp"
+        android:text="Sign Up"
+        android:textColor="@android:color/white"
+
+        app:layout_constraintBottom_toTopOf="@+id/txtLogin"
+        app:layout_constraintTop_toBottomOf="@+id/passwordEditText"
+        tools:layout_editor_absoluteX="16dp" />
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/txtLogin"
+        android:textColor="@color/black"
+        android:text="Already have an account? Login Here"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
