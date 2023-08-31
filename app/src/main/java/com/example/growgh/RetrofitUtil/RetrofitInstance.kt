@@ -1,6 +1,7 @@
 package com.example.growgh.RetrofitUtil
 
 import com.example.growgh.InterfaceAPI.ImageInterfaceAPi
+import com.example.growgh.InterfaceAPI.NewsAPI_Interface
 import com.example.growgh.InterfaceAPI.VideoInterfaceAPI
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -8,6 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 object RetrofitInstance {
     val base_url = "https://api.unsplash.com/"
     private const val BASE_URL_Pexels_Video = "https://api.pexels.com/"
+    val BASE_URL_NEWS = "https://newsapi.org/v2/"
 
     private const val BASE_URL_Vimeo = "https://api.vimeo.com/"
     private const val ACCESS_TOKEN = "YOUR_ACCESS_TOKEN"
@@ -20,6 +22,13 @@ Retrofit.Builder()
     .create(ImageInterfaceAPi::class.java)
     }
 
+    val Newsapi : NewsAPI_Interface by lazy {
+        Retrofit.Builder()
+            .baseUrl(BASE_URL_NEWS)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(NewsAPI_Interface::class.java)
+    }
 
 //    val VideoApi : VideoInterfaceAPI by lazy {
 //        Retrofit.Builder()

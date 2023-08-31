@@ -35,7 +35,19 @@ class LoginActivity : AppCompatActivity() {
         }
         binding.txtSignUp.setOnClickListener {
             startActivity(Intent(this,SignUpActivity::class.java))
+            finish()
         }
 
+
     }
+
+    override fun onStart() {
+        super.onStart()
+        if (FirebaseAuth.getInstance().currentUser!=null){
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
+    }
+
+
 }

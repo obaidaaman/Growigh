@@ -7,6 +7,14 @@
     tools:context=".Activities.MainActivity">
 
     <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:id="@+id/imgSignOut"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="15dp"
+        android:src="@drawable/baseline_power_settings_new_24"/>
+    <ImageView
         android:id="@+id/img_happy_sun"
         android:layout_width="250dp"
         android:layout_height="220dp"
@@ -21,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="42dp"
-        android:text="Welcome Ayush"
+        android:text="Welcome User"
 
         android:textColor="@color/black"
         android:textSize="32sp"
@@ -47,7 +55,7 @@
         android:layout_width="333dp"
         android:layout_height="69dp"
         android:background="@drawable/feeds_and_img_layout"
-        android:text="Upload Image"
+        android:text="News"
         android:layout_marginTop="35dp"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"

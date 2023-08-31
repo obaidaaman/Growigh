@@ -44,6 +44,8 @@ class FeedsActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
+
+
         val adapterViewPager  = ViewPagerAdapter(this,fragArrayList)
      //   binding.mainPager.adapter= adapterViewPager
 //        binding.mainPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){

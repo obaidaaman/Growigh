@@ -39,6 +39,8 @@ android {
 
 dependencies {
 
+    implementation 'com.google.firebase:firebase-firestore-ktx:24.7.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     var lifecycle_version = "2.6.1"
     var arch_version = "2.2.0"
 
